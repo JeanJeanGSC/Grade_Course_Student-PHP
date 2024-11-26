@@ -1,0 +1,142 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Limite la largeur pour garder le contenu centré */
+}
+
+/* Section détails de l'étudiant */
+.student-details {
+    width: 48%; /* Ajuste la largeur */
+    padding: 20px;
+    border-right: 2px solid #ddd; /* Séparateur entre les deux colonnes */
+}
+
+.student-details h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #2c3e50;
+}
+
+.student-details p {
+    margin: 12px 0;
+    font-size: 1em;
+}
+
+.student-details p strong {
+    display: inline-block;
+    width: 150px;
+    color: #555;
+}
+
+/* Section des notes de l'étudiant */
+.student-grades {
+    width: 48%; /* Ajuste la largeur */
+    padding: 20px;
+}
+
+.student-grades h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #2c3e50;
+}
+
+.course-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-list li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between; /* Aligne le texte de chaque ligne */
+    align-items: center; /* Centre verticalement */
+}
+
+.course-list li span {
+    display: block;
+    width: 30%; /* Chaque élément prend 30% de l'espace */
+}
+
+.course-list li span strong {
+    color: #555;
+}
+
+.course-list li input[type="text"] {
+    width: 60px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #007BFF; /* Légère bordure bleue */
+    outline: none;
+    padding: 5px 0;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.course-list li input[type="text"]:focus {
+    border-bottom: 2px solid #0056b3; /* Bordure plus foncée au focus */
+}
+
+.course-list li:last-child {
+    border-bottom: none; /* Retire la bordure pour le dernier élément */
+}
+
+/* Bouton de mise à jour */
+.btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:active {
+    background-color: #003f7f;
+}
+
+/* Messages de confirmation et d'erreur */
+.message {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.message.error {
+    background-color: #f44336;
+    color: white;
+}
+

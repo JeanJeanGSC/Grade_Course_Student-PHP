@@ -1,0 +1,121 @@
+/* 
+    Created on : 2024-10-10, 09:17:37
+    Author     : JGSC
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box; /* Ajoute box-sizing pour inclure padding et border dans la taille totale */
+}
+
+body {
+    margin: 0;
+    height: 100vh; /* S'assure que le body prend toute la hauteur de la fenêtre */
+    background: rgba(99, 91, 73, 0.9);
+}
+
+.Home {
+    position: relative; /* Permet de positionner l'overlay par rapport à ce conteneur */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px auto 50px;
+    margin: 0;
+    height: 100vh;
+    
+    background-size: cover; /* S'assure que l'image couvre tout l'écran */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    transition: background-image 1s ease-in-out;
+}
+.Home::before {
+    content: ""; /* Nécessaire pour créer un élément vide */
+    position: absolute; /* Se place par rapport à l'élément parent (Home) */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(227, 219, 202, 0.3); /* Fond noir avec 30% d'opacité */
+    z-index: 0; /* S'assure que ce fond est sous le contenu (texte et autres éléments) */
+}
+.HH_Content,
+.LeftSide,
+.HomeSignature {
+    position: relative; /* Garde le contenu au-dessus de l'overlay */
+    z-index: 1; /* S'assure que le texte est visible */
+}
+
+.HomeHeader {
+    grid-column: 1 / 3;
+}
+.HH_Content {
+    margin: 2%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.HH_Titre {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: default;
+}
+.HH_Content p {
+    font-size: 0.7em;
+    font-family: 'Montserrat';
+    cursor: default;
+}
+
+
+
+.LeftSide {
+    grid-column: 1 / 2;
+    z-index: 1; /* S'assure que le menu est au-dessus de l'image de fond */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Répartit l'espace verticalement */
+    align-items: center;
+}
+
+.MenuPrincipal{
+    width: 100%;
+}
+.MenuChoix{
+    margin: 3% 1% 3% 5%;
+    list-style-type: none;
+    background: rgba(99, 91, 73, 0.5);
+    transition: .2s;
+    transform-origin: left;
+}
+.MenuChoix:hover {
+    transform: scale(1.2);
+}
+.MenuChoix a {
+    text-decoration: none;
+    color: black;
+}
+.ContentTitre {
+    color: whitesmoke;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    /*font-weight: 500; aucun changement visible en dessous d'un certain seuil*/
+}
+
+
+
+/* **************************************************** FOOTER *** */
+
+.HomeSignature {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-size: 0.8rem;
+    z-index: 1;
+    cursor: default;
+}

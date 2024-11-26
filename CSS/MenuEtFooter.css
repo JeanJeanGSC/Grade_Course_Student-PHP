@@ -1,0 +1,44 @@
+/* 
+    Created on : 2024-10-10, 17:28:14
+    Author     : JGSC
+*/
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+}
+
+.dropdown-menu a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.Signature {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
